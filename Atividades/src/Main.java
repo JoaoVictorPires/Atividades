@@ -1,5 +1,10 @@
+import Code02.Animal;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Animal macaco = new Animal();
+        macaco.nome = "Jeregotango";
+        macaco.especie = "Masqueico";
+        macaco.imprimirDados();
     }
 }
