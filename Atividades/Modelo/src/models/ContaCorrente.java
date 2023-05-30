@@ -1,6 +1,7 @@
 package models;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Random;
 public class ContaCorrente {
         private String titular;
@@ -16,6 +17,7 @@ public class ContaCorrente {
         private double jurosCheque;
         private double valorEmJuizo;
         private ArrayList<String> extrato = new ArrayList<>();
+        private double taxas;
 
         public ContaCorrente(String titular, String cpf, String senha) {
             this.setTitular(titular);
@@ -27,6 +29,7 @@ public class ContaCorrente {
             this.setAgencia("0001");
             this.setNumeroConta((1000000 % new Random().nextInt()) + 1000);
             this.valorEmJuizo = 0.1;
+            this.extrato = new ArrayList<>();
         }
 
         @Override
